@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Assignment 4</title>
+    </head>
+
+    <body>
+        <h1>ASSIGNMENT 4</h1>
+        <div class="question">
+            <h3 class="Question_numbers">Question no.1  Count Characters </h3>
+            <p>
+                You are given a string S, and your task is to return an array B(having a
+                size of 2), where B[0] contains the count of character A (uppercase) in
+                string S and B[1] contains the count of character D (uppercase) in
+                string S. Note: You have to complete countCharacters function. No need
+                to take any input.
+            </p>
+        </div>
+        <pre class="jscode">
+        <code>
+            let s='bAaDAAbAD'
+            function countCharacters(){
+                let count0 =0
+                let count1=0
+                let b=[count0,count1]
+                for (const char of s){
+                    if (char==="A"){
+                        b[0] = count0+=1
+                    }
+                    else if (char==="D"){
+                        b[1]=count1+=1
+                    }
+                }
+                return b
+            }
+        </code>
+    </pre>
+        <div class="runner">
+            <button onclick="runcode1()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output" class="inp" />
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.2 Count the Heads  </h3>
+            <p>
+                Tina is given a string S which contains the first letter of all the
+                student names in her class. She got a curiosity to check how many people
+                have their names starting from the same alphabet. So given a string S,
+                she decided to write a code that finds out the count of characters that
+                occur more than once in the string. Note: You have to complete Count
+                Head function. No need to take any input.
+            </p>
+        </div>
+        <pre class="jscode">
+        <code>
+            let str = "gaurav kumar"
+            let charcount={}
+            function CounterHead(){
+               for (const char of str) {
+               if (char in charcount){
+                  charcount[char]+=1
+               }
+               else{
+                  charcount[char]=1 
+               }
+               }
+               return charcount;
+            }
+        </code>
+    </pre>
+        <div class="runner">
+            <button onclick="runcode2()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output2" style="width: 400px" class="inp" />
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.3 Count the Vowels </h3>
+            <p>
+                You are given a string S containing both uppercase and lowercase
+                letters. You need to find out the number of vowels in the given string.
+                Note: You have to complete Count_Vowel function. No need to take any
+                input.
+            </p>
+        </div>
+        <pre class="jscode"><code>
+        function Count_Vowel(){
+            let str1 = "gaurav kumar E"
+            vowels = ['a','e','i','o','u','A','E','I','O','U']
+            vowels_count = 0
+            v=""
+            for (const char of str1) {
+            if (vowels.includes(char)){
+               v+=char
+               vowels_count+=1
+            }
+         }
+         }
+         Count_Vowel()
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode3()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output3" style="width: 200px" class="inp" />
+        </div>
+
+
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.4  Concatenate the Strings</h3>
+            <p>
+                You are given two strings S1 and S2 (containing both uppercase and lowercase letters), You need to
+                retrun a string which is the
+                concatenation of both the given strings.
+                Note: You have to complete Concatenate_Strings function. No need to take any input.
+            </p>
+        </div>
+        <pre class="jscode"><code>
+            function Concatenate_Strings(){
+                let s1="hello hey"
+                let s2="how are you?"
+                let c = s1 +" "+ s2
+                console.log(c);
+                
+             }
+             Concatenate_Strings()
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode4()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output4" style="width: 500px" class="inp" />
+        </div>
+
+
+        <!-- Question 5-->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.5  Find Length </h3>
+            <p>
+                You are given a string S, and your task is to return the length of the string S.
+                Note: You have to solve it without using length method. You have to complete findLength function. No
+                need to take any input..
+            </p>
+        </div>
+        <pre class="jscode"><code>
+            let findlenght = ()=>{
+                let count=0
+                let s="welcome to my web page."
+                for(let i of s){
+                   count+=1
+                }
+                console.log("length of string",count);
+             }
+             findlenght();
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode5()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output5" style="width: 500px" class="inp" />
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.6  Find the Winner </h3>
+            <p>
+                You are given a string S consisting of two letters A and D,where each character represent the winner of
+                N games played between Aditya
+                and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish. You
+                need to find out the that which
+                player wins the maximum number of games or there is a draw between them.
+                Note: You have to complete Game_Winner function. No need to take any input. .
+            </p>
+        </div>
+        <pre class="jscode" style="height: 77vh;"><code>
+            let Game_Winner = ()=>{
+                let count_a=0
+                let count_d=0 
+                const str='ADDAAAAAAAADDDDDDDDDDDAAAAADDDDDDDDDDAAAAAAAAAAAADDDDDDDD'
+                for (let char of str){
+                   if(char==='A'){
+                      count_a+=1
+                   }
+                   else if(char==='D'){
+                      count_d+=1
+                   }
+                }
+                if(count_a > count_d){
+                   console.log("Aditya");
+                   
+                }
+                else if(count_a < count_d)
+                {console.log("Danish");
+                }
+                else if(count_a === count_d){
+                   console.log("both are same so game is withdraw");
+                }
+                else{
+                   console.log("try again");
+                   
+                }
+             }
+             Game_Winner();
+            </code>
+        </pre>
+
+        <div class="runner">
+            <button onclick="runcode6()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output6" style="width: 500px" class="inp" />
+        </div>
+
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.7  Join Strings </h3>
+            <p>
+                You are given two strings S and P, and your task is to concatenate them and return the concatenated
+                string.
+                Note: You have to complete joinStrings function. No need to take any input. .
+            </p>
+        </div>
+        <pre class="jscode"><code>
+            const joinString = ()=>{
+                let s = "PreBytes"
+                let p ="Technologies"
+                const a = s+p
+                console.log(a);
+             }
+             joinString()
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode7()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output7" style="width: 500px" class="inp" />
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.8 Plaindrome Check </h3>
+            <p>
+                You are given a string S, Your task is to check wether the given string is a Palindrome or not.
+                A Palindrome is a string, which turnout same when read in reverse direction. Example: "naman" is a
+                Palindrome. String can contain
+                both upppercase lowercase letters.
+                Note: You have to complete Plain_Check function. No need to take any input..
+            </p>
+        </div>
+        <pre class="jscode"><code>
+            const Plain_Check = ()=>{
+                let s="Madam"
+                let s1 = s.toLowerCase(s)
+                let re_str = ""
+                console.log(s1);
+                for (let char in s1){
+                   re_str=s1[char]+re_str
+                }
+                if(s1===re_str){
+                   console.log("Palindorm string");
+                }
+                else{
+                   console.log("not Palindrom string");
+                   
+                }
+                console.log(re_str);
+             }
+             Plain_Check()
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode8()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output8" style="width: 500px" class="inp" />
+        </div>
+
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.9 Reverse the String </h3>
+            <p>
+                You are given a string S, Your task is to Reverse the string. String can contain both upppercase lowercase letters. Note: You have to 
+                complete Reverse_String function. No need to take any input. .
+            </p>
+        </div>
+        <pre class="jscode"><code>
+            const reverse_string = ()=>{
+                let r_str=''
+                let s = 'I am utkarsh raj'
+                for(let char of s){
+                   r_str = char + r_str
+                   // console.log(char);
+                   
+                }
+                console.log('reverse string:',r_str);
+             }
+             reverse_string()
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode9()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output9" style="width: 500px" class="inp" />
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h3 class="Question_numbers">Question no.10 Match the Strings </h3>
+            <p>
+                You are given two strings S1 and S2, Your task is to print YES if both strings are same else print NO. 
+                Note: You have to complete String_Match function. No need to take any input.
+            </p>
+        </div>
+        <pre class="jscode"><code>
+            let match_string = ()=>{
+                let s1 = "PreBytes"
+                let s2 = "PreBytes"
+                if (s1 ===s2){
+                   console.log('yes');
+                }
+                else{
+                   console.log('No');
+                   
+                }
+             }
+             match_string()
+    </code></pre>
+
+        <div class="runner">
+            <button onclick="runcode10()" id="btn" class="btn">run code</button>
+            <h2>output-></h2>
+            <input type="text" readonly id="output10" style="width: 500px" class="inp" />
+        </div>
+        <script src="./script.js"></script>
+    </body>
+
+</html>
